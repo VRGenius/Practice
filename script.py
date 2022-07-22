@@ -12,12 +12,12 @@ else:
 
     for cell in content['cells']:
         source = 0
-    if len(cell['source']) == 0:
-        break
+        if len(cell['source']) == 0:
+            break
 
-    if cell['cell_type'] == 'code':
-        try:
-            source = ''.join(line for line in cell['source'] if not line.startswith('%'))
-            exec(source, globals(), locals())
-        except Exception as e:
-            print("Error in " + str(cell['execution_count']) + " cell")
+        if cell['cell_type'] == 'code':
+            try:
+                source = ''.join(line for line in cell['source'] if not line.startswith('%'))
+                exec(source, globals(), locals())
+            except Exception as e:
+                print("Error in " + str(cell['execution_count']) + " cell")
