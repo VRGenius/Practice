@@ -1,3 +1,4 @@
+statsmodels
 requests
 pandas
 numpy
