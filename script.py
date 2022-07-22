@@ -1,12 +1,12 @@
 import base64
 import requests
+import json
 url = 'https://api.github.com/repos/VRGenius/Practice/contents/regression_exercise.ipynb'
-req = requests.get(url)
-if req.status_code == requests.codes.ok:
-    req = req.json()  # the response is a JSON
-    # req is now a dict with keys: name, encoding, url, size ...
-    # and content. But it is encoded with base64.
-    content = base64.decodebytes(req['content'])
+response = requests.get(url)
+if response.status_code == requests.codes.ok:
+    jsonResponse = response.json()  # the response is a JSON
+    #the JSON is encoded in base 64, hence decode it
+    content = base64.b64decode(jsonResponse['content'])
 else:
     raise Exception ('Content was not found')
 
