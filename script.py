@@ -12,7 +12,7 @@ if response.status_code == requests.codes.ok:
 else:
     raise Exception ('Content was not found')
 
-isFail = false
+isFail = False
 for cell in content['cells']:
     source = 0
     if len(cell['source']) == 0:
@@ -24,7 +24,7 @@ for cell in content['cells']:
             exec(source, globals(), locals())
             print ("No error in " + str(cell['execution_count']) + " cell")
         except Exception as e:
-            isFail = true
+            isFail = True
             print ("Error in " + str(cell['execution_count']) + " cell")
             
 if isFail:
