@@ -1,6 +1,6 @@
 import base64
 import requests
-url = 'https://api.github.com/repos/VRGenius/Practice/contents/https://github.com/VRGenius/Practice/blob/main/regression_exercise.ipynb'
+url = 'https://api.github.com/repos/VRGenius/Practice/contents/regression_exercise.ipynb'
 req = requests.get(url)
 if req.status_code == requests.codes.ok:
     req = req.json()  # the response is a JSON
