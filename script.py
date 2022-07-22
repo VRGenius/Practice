@@ -22,7 +22,6 @@ for cell in content['cells']:
         try:
             source = ''.join(line for line in cell['source'] if not line.startswith('%'))
             exec(source, globals(), locals())
-            print ("No error in " + str(cell['execution_count']) + " cell")
         except Exception as e:
             isFail = True
             print ("Error in " + str(cell['execution_count']) + " cell")
