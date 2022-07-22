@@ -1,6 +1,6 @@
+numpy
 statsmodels
 requests
 pandas
-numpy
 sklearn
 statsmodels.api
