@@ -1,5 +1,3 @@
-from fileinput import filename
-from json import load
 import base64
 import requests
 url = 'https://api.github.com/repos/VRGenius/Practice/contents/https://github.com/VRGenius/Practice/blob/main/regression_exercise.ipynb'
