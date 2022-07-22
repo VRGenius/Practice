@@ -11,7 +11,7 @@ else:
     raise Exception ('Content was not found')
 
     for cell in content['cells']:
-    source = 0
+        source = 0
     if len(cell['source']) == 0:
         break
 
