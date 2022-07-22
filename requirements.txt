@@ -3,3 +3,4 @@ statsmodels
 requests
 pandas
 sklearn
+pylab
