@@ -19,6 +19,10 @@ else:
             try:
                 source = ''.join(line for line in cell['source'] if not line.startswith('%'))
                 exec(source, globals(), locals())
-                print("No error in " + str(cell['execution_count']) + " cell")
+                my_output = f"No error in " + str(cell['execution_count']) + " cell"
+                print(f"::set-output name=myOutput::{my_output}")
+                my_output = 0
             except Exception as e:
-                print("Error in " + str(cell['execution_count']) + " cell")
+                my_output = f"Error in " + str(cell['execution_count']) + " cell"
+                print(f"::set-output name=myOutput::{my_output}")
+                my_output = 0
