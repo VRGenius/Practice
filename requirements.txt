@@ -3,4 +3,4 @@ statsmodels
 requests
 pandas
 sklearn
-pylab
+matplotlib
